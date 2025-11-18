@@ -147,7 +147,7 @@ PEFT (LoRA) + supervised fine-tuning
 - Add an appropriate license file if you plan to make this repository reusable (MIT, Apache-2.0, etc.).
 - For questions or collaboration: @cetinkayaevren (GitHub) — https://github.com/cetinkayaevren
 
-Notes
+### Notes
 - The notebooks themselves include per-file details and execution instructions. Open each notebook to see dataset paths, configurable hyperparameters, and experimental notes.
 - If you want, I can:
   - generate a requirements.txt or environment.yml for the notebooks,
