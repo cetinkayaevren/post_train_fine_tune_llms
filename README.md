@@ -21,13 +21,13 @@ Table of contents
 - References
 - License & contact
 
-About
+## About
 This collection demonstrates practical recipes and experiments for adapting LLMs:
 - Post-training and lightweight fine-tuning with PEFT (LoRA) and Hugging Face ecosystem tools.
 - Reinforcement-style fine-tuning using PPO and GRPO variants to optimize reward signals (RLHF-style).
 - Notebook-driven experiments that can be adapted for different base models, datasets, and compute budgets.
 
-Repository structure
+## Repository structure
 - GRPO_Reinforcement_Fine_Tuning_LLMs/
   - Notebooks and helper code that implement GRPO-based reinforcement fine-tuning workflows for LLMs.
 - RLHF_PPO_PEFT_LoRA_Fine_Tuning_LLMs/
@@ -35,7 +35,7 @@ Repository structure
 - README.md
   - This file (overview, usage, and instructions).
 
-What’s included (high level)
+## What’s included (high level)
 - End-to-end notebook examples that:
   - Load and prepare datasets (Hugging Face datasets or local data).
   - Initialize pretrained models and tokenizers.
@@ -44,7 +44,7 @@ What’s included (high level)
   - Track training and evaluation metrics; optionally save model checkpoints.
 - Guidance on environment setup and package dependencies.
 
-Requirements
+## Requirements
 (These are typical packages used in LLM fine-tuning workflows — adapt as needed for the notebooks.)
 - Python 3.8+
 - PyTorch (recommended: 1.12+ or a version compatible with CUDA drivers)
@@ -68,7 +68,7 @@ pip install jupyterlab torch transformers accelerate datasets peft bitsandbytes 
 ```
 If you prefer conda, create an environment and install using conda-forge/pip as appropriate.
 
-Quick start
+## Quick start
 1. Clone the repository:
    git clone https://github.com/cetinkayaevren/post_train_fine_tune_llms.git
 2. Create and activate your Python environment (see Requirements).
@@ -79,7 +79,7 @@ Quick start
    - RLHF_PPO_PEFT_LoRA_Fine_Tuning_LLMs/
 5. Read the notebook top cells for per-notebook requirements and the expected dataset/paths.
 
-Typical workflows
+## Typical workflows
 
 PEFT (LoRA) + supervised fine-tuning
 - Purpose: Quickly adapt a large pre-trained model to a downstream task using a small number of trainable parameters (LoRA).
@@ -90,7 +90,7 @@ PEFT (LoRA) + supervised fine-tuning
   - Train with Hugging Face Trainer or custom loop using accelerate.
   - Save final LoRA adapter + tokenizer and optionally merge adapters into base model.
 
-Reinforcement-based fine-tuning (PPO / GRPO / RLHF)
+## Reinforcement-based fine-tuning (PPO / GRPO / RLHF)
 - Purpose: Optimize model outputs according to a reward function (e.g., preference model, heuristics).
 - Typical steps in notebook:
   - Prepare a reward model or reward function.
@@ -98,7 +98,7 @@ Reinforcement-based fine-tuning (PPO / GRPO / RLHF)
   - Run PPO or GRPO loop to update model parameters to maximize expected reward while keeping divergence from base policy limited.
   - Log reward statistics and sample generations to inspect behavior changes.
 
-Data & checkpoints
+## Data & checkpoints
 - Notebooks are written to work with Hugging Face datasets and local data (CSV/JSON). Check the top of each notebook for dataset loading instructions.
 - Use a checkpointing directory and save:
   - model weights / adapter weights
@@ -106,7 +106,7 @@ Data & checkpoints
   - training logs / metrics
 - For large models, consider saving only adapters (LoRA) to minimize storage needs.
 
-Evaluation & logging
+## Evaluation & logging
 - Recommended metrics:
   - Task-specific metrics (accuracy, F1, BLEU, ROUGE, etc.)
   - Perplexity (for language modeling)
@@ -116,13 +116,13 @@ Evaluation & logging
   - Weights & Biases (W&B)
   - Simple CSV/JSON logs for reproducibility
 
-Reproducibility tips
+## Reproducibility tips
 - Pin package versions in a requirements.txt or environment.yml.
 - Set random seeds (PyTorch, NumPy, Python random) at the top of notebooks.
 - Log hardware, CUDA/cuDNN versions, and model configurations.
 - Save the exact model and tokenizer checkpoints used for evaluation.
 
-Performance & compute notes
+## Performance & compute notes
 - GPU (preferably with >12GB VRAM) is strongly recommended for all model fine-tuning experiments.
 - For memory-limited setups:
   - Use 8-bit optimizers (bitsandbytes).
@@ -130,20 +130,20 @@ Performance & compute notes
   - Lower batch sizes and use gradient accumulation.
 - When using bitsandbytes and 8-bit training, ensure compatibility between CUDA, PyTorch, and the bitsandbytes release.
 
-Contributing
+## Contributing
 - Contributions and improvements are welcome. Suggested ways to contribute:
   - Add missing instructions for notebook-specific dependencies.
   - Provide small reproducible datasets or colab / binder examples.
   - Improve logging, add model-card templates, or include evaluation notebooks.
 - Open issues and PRs in the repository with clear descriptions and test instructions.
 
-References
+## References
 - Hugging Face Transformers: https://github.com/huggingface/transformers
 - PEFT (LoRA): https://github.com/huggingface/peft
 - RLHF / PPO utilities: trl / trlX repositories
 - BitsandBytes for memory-efficient training: https://github.com/facebookresearch/bitsandbytes
 
-License & contact
+## License & contact
 - Add an appropriate license file if you plan to make this repository reusable (MIT, Apache-2.0, etc.).
 - For questions or collaboration: @cetinkayaevren (GitHub) — https://github.com/cetinkayaevren
 
