@@ -1,9 +1,9 @@
 # Post-Training & Fine-Tuning LLMs
 
-This repository collects Jupyter notebooks that implement and demonstrate post-training and fine-tuning methods for large language models (LLMs). The notebooks explore both parameter-efficient fine-tuning (PEFT) strategies (e.g., LoRA) and reinforcement-based fine-tuning approaches (e.g., PPO / GRPO for RLHF-style optimization). The goal is to provide reproducible examples and practical guidance for adapting pre-trained LLMs to downstream tasks and reward-driven behavior.
+This repository includes Python Jupyter notebooks that implement and demonstrate post-training and fine-tuning methods for large language models (LLMs). The notebooks explore both parameter-efficient fine-tuning (PEFT) strategies (e.g., LoRA) and reinforcement-based fine-tuning approaches (e.g., PPO / GRPO for RLHF-style optimization). The goal is to provide reproducible examples and practical guidance for adapting pre-trained LLMs to downstream tasks and reward-driven behavior.
 
 - Repository: https://github.com/cetinkayaevren/post_train_fine_tune_llms
-- Primary language / artifacts: Jupyter Notebooks
+- Primary language / artifacts: Python - Jupyter Notebooks
 
 Table of contents
 - About
